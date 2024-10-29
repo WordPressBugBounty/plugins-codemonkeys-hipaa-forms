@@ -1,9 +1,9 @@
 === HIPAA FORMS - Add HIPAA Compliant Webforms to Your Wordpress Website ===
-Contributors: Sfraise77, Dmoore8200
-Tags: hipaa forms, gravity forms, hipaa compliance, secure forms, health forms, medical forms
+Contributors: codemonkeys
+Tags: hipaa forms, gravity forms, secure forms, health forms, medical forms
 Requires at least: 5.4
-Tested up to: 6.6.5
-Stable tag: 3.0.4
+Tested up to: 6.7.5
+Stable tag: 3.0.5
 License: GPLv2
 
 Add HIPAA Compliant web forms easily to your Wordpress website using the HIPAA FORMS SaaS Service and Caldera or Gravity Forms.
@@ -185,6 +185,10 @@ We understand that this can be frustrating to developers that do not have a stag
 
 
 == Changelog ==
+V3.0.5
+- Replaced static path to WP_CONTENT_URL in enqueue file
+- Removed time from frontend script path
+
 V3.0.4
 - Fixed form print not bringing up print preview
 

@@ -40,11 +40,11 @@ function cm_hipaa_enqueue_admin_scripts() {
 
             // ENQUEUE SCRIPT
             wp_enqueue_script( 'jquery-form' );
-            wp_enqueue_script( 'cmHipaaAdminBuggyFill', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.js', array('jquery'), '3.0.4', true );
-            wp_enqueue_script( 'cmHipaaAdminBuggyFillHack', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.hacks.js', array('jquery'), '3.0.4', true );
-            wp_enqueue_script( 'cmHipaaAdminScript', plugin_dir_url(__FILE__) . 'js/admin-script.js', array('jquery'), '3.0.4', true );
-            wp_enqueue_script( 'cm-hipaa-signature', plugin_dir_url(__FILE__) . 'js/jSignature/jSignature.min.noconflict.js', array('jquery'), '3.0.4', true);
-            wp_enqueue_script( 'cm-hipaa-jquery-print', plugin_dir_url(__FILE__) . 'js/printThis.js', array('jquery'), '3.0.4', true);
+            wp_enqueue_script( 'cmHipaaAdminBuggyFill', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.js', array('jquery'), '3.0.5', true );
+            wp_enqueue_script( 'cmHipaaAdminBuggyFillHack', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.hacks.js', array('jquery'), '3.0.5', true );
+            wp_enqueue_script( 'cmHipaaAdminScript', plugin_dir_url(__FILE__) . 'js/admin-script.js', array('jquery'), '3.0.5', true );
+            wp_enqueue_script( 'cm-hipaa-signature', plugin_dir_url(__FILE__) . 'js/jSignature/jSignature.min.noconflict.js', array('jquery'), '3.0.5', true);
+            wp_enqueue_script( 'cm-hipaa-jquery-print', plugin_dir_url(__FILE__) . 'js/printThis.js', array('jquery'), '3.0.5', true);
         };
     };
 
@@ -53,6 +53,7 @@ function cm_hipaa_enqueue_admin_scripts() {
     wp_localize_script('cmHipaaAdminScript', 'hipaaScript', array(
         'pluginUrl' => plugin_dir_url(__FILE__),
         'siteUrl' =>  get_site_url(),
+        'contentUrl' => WP_CONTENT_URL,
         'nonce' => wp_create_nonce('cm-hipaa-admin-nonce'),
         'ajax_url' => admin_url( 'admin-ajax.php' )
     ));
@@ -73,10 +74,10 @@ function enqueue_cm_hipaa_scripts() {
     wp_enqueue_style( 'cmHipaaAdminStyle', plugin_dir_url(__FILE__) . '/css/style.css' );
 
     // ENQUEUE CUSTOM JS
-    wp_enqueue_script( 'cmHipaaBuggyFill', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.js', array('jquery'), '3.0.4', true );
-    wp_enqueue_script( 'cmHipaaBuggyFillHack', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.hacks.js', array('jquery'), '3.0.4', true );
-    wp_enqueue_script('cm-hipaa-script', plugin_dir_url(__FILE__) . 'js/script.js', array('jquery'), '3.0.4&time=' . time(), true);
-    wp_enqueue_script('cm-hipaa-signature', plugin_dir_url(__FILE__) . 'js/jSignature/jSignature.min.noconflict.js', array('jquery'), '3.0.4', true);
+    wp_enqueue_script( 'cmHipaaBuggyFill', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.js', array('jquery'), '3.0.5', true );
+    wp_enqueue_script( 'cmHipaaBuggyFillHack', plugin_dir_url(__FILE__) . 'js/viewport-units-buggyfill.hacks.js', array('jquery'), '3.0.5', true );
+    wp_enqueue_script('cm-hipaa-script', plugin_dir_url(__FILE__) . 'js/script.js', array('jquery'), '3.0.5', true);
+    wp_enqueue_script('cm-hipaa-signature', plugin_dir_url(__FILE__) . 'js/jSignature/jSignature.min.noconflict.js', array('jquery'), '3.0.5', true);
 
     // CHECK IF HOMEPAGE
     if (is_front_page()) {

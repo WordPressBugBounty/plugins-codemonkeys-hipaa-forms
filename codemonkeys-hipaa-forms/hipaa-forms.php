@@ -9,7 +9,7 @@
  * Plugin Name: HIPAA Forms
  * Plugin URI: https://www.hipaaforms.online
  * Description: HIPAA Compliant Forms
- * Version: 3.0.4
+ * Version: 3.0.5
  * Author: Code Monkeys LLC
  * Author URI: https://www.codemonkeysllc.com
  * License: GPL2

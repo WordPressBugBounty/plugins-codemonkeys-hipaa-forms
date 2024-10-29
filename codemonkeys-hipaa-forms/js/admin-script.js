@@ -1,6 +1,6 @@
 /**
  * Created by Spencer on 7/16/2018.
- * V3.0.4
+ * V3.0.5
  * Updated: 10/24/2023 by Dan
  */
 
@@ -1131,9 +1131,8 @@ jQuery(document).ready(function() {
     /*** PRINT SUBMITTED FORM ***/
     jQuery(document).on('click', '.cm-hipaa-submitted-form-print', function() {
         var pluginCSS = hipaaScript.pluginUrl + 'css/admin-style.css';
-        //var gravityCSS = hipaaScript.siteUrl + '/wp-content/plugins/gravityforms/forms.min.css';
-        var gravityCSS = hipaaScript.siteUrl + '/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css';
-        var calderaCSS = hipaaScript.siteUrl + '/wp-content/plugins/caldera-forms/assets/css/caldera-form.css';
+        var gravityCSS = hipaaScript.contentUrl + '/plugins/gravityforms/assets/css/dist/basic.min.css';
+        var calderaCSS = hipaaScript.contentUrl + '/plugins/caldera-forms/assets/css/caldera-form.css';
         var printCSS = hipaaScript.pluginUrl + '/css/print.css';
         var form = jQuery(this).closest('.cm-hipaa-submitted-form-fields-inner');
         var formId = jQuery(this).attr('data-form-id');

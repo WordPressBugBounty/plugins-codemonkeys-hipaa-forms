@@ -1,7 +1,7 @@
 /**
  * Created by Spencer on 7/16/2018.
  * Updated by Dan on 7/14/2023.
- * V3.0.4
+ * V3.0.5
  */
 
 // IE FIX FOR startsWith METHOD
